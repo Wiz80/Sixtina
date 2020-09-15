@@ -7,7 +7,8 @@
 </head>
 <body>
     <div class = "contenedor">
-        <img src= "{%static 'images/David_1.png' %}"/>
+        {% block interfaz %}
+        {% endblock %}
         <div class = "mas">
             <button style = "border: none;" onclick = 'Mostrar()'>
             <img src = "{%static 'images/mas.png'%}"/>
@@ -21,15 +22,8 @@
         <div class = 'buscar'>
         <img src = "{%static 'images/Buscar.png'%}" />
         </div>
-        <div class = 'mujer'>
-            <img src = "{%static 'images/Mujer.png'%}">
-        </div>
-        <div class = 'hombre'>
-            <img src = "{%static 'images/Hombre.png'%}">
-        </div>
-        <div class = 'new'>
-            <img src = "{%static 'images/New.png'%}"/>
-        </div>
+        {% block herramientas %}
+        {% endblock %}
     </div>
 </body>
 </html>
