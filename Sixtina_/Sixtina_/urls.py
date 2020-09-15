@@ -19,5 +19,5 @@ from Interfaz import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name = "Sixtina")
+    path('', views.index, name = "Sixtina")
 ]

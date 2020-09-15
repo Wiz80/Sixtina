@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Proxima Nova Regular';
+    font-size: 12px;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.mas{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+}
+#caja{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: #707070;
+}
+.iniciar_sesion{
+    position: absolute;
+    top: 10.3%;
+    left: 75%;
+}
+.buscar{
+    position: absolute;
+    top: 10%;
+    left: 85%;
+}
+
+.mujer{
+    position: absolute;
+    top: 50%;
+    left: 1253px;
+}
+
+.hombre{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+}
+
+.new{
+    position: absolute;
+    top: 598px;
+    left: 662px;
+}
