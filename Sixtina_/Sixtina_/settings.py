@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Interfaz',
+    'Usuarios',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,3 +120,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "Usuarios", "static"),
+    os.path.join(BASE_DIR, "Interfaz", "static"),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")

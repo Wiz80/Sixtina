@@ -1,4 +1,4 @@
-{%load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class = 'iniciar_sesion'>
-        <a href = 'iniciar_sesion.html' style  = "padding-right: 30px;">INICIAR SESION</a>
+        <a href = '{% login/ %}' style  = "padding-right: 30px;">INICIAR SESION</a>
         </div>
         <div class = 'buscar'>
         <img src = "{%static 'images/Buscar.png'%}" />
