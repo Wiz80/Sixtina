@@ -9,3 +9,11 @@ body{
 .row{
   border-radius: 7px;
 }
+.col-1{
+  width: 500px;
+  height: 400px;
+  position: absolute;
+}
+.Sixtina{
+  
+}
