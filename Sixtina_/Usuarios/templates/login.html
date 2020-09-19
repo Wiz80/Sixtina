@@ -7,39 +7,58 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
   </head>
   <body>
+    <div class = "mas">
+      <img src = "{%static 'images/mas.png'%}"/>
+    </div>
+    <div class="Sixtina">
+      <img src="{%static 'images/sixtina.png'%}" alt="">
+    </div>
     <section class="form">
       <div class="container">
-        <div class="row no-gutters">
+        <div class="row">
           <div class="col-1">
             <img src="{% static 'images/zeus.png' %}" class="zeus-img">
           </div>
           <div class="col-2">
-            <div class="Sixtina">
-              <h1>S  I  X  T  I  N  A</h1>
-            </div>
+            <h1 class="inicio-sesion">INICIA SESIÓN</h1>
             <form>
               <div class="form-row">
-                <form class="col-2">
+                <form>
                   <input type="email" class="form-control" placeholder="E-mail">
                 </form>
               </div>
               <div class="form-row">
-                <form class="col-2">
+                <form>
                   <input type="password" class="form-control" placeholder="Contraseña">
                 </form>
               </div>
-              <a href="#">¿Has olvidado tu contraseña</a>
               <div class="form-row">
-                <form class="col-2">
-                  <button type="button" class="submit">Iniciar sesión</button>
+                <a href="#">¿Has olvidado tu contraseña</a>
+              </div>
+              <div class="form-row">
+                <form>
+                  <button type="button" class="submit">INICIAR SESIÓN</button>
                 </form>
               </div>
             </form>
           </div>
+          <div class="col-3">
+            <h1 class="inicio-sesion">REGÍSTRATE</h1>
+            <div class="registro-msg">
+              <p>¿No cuentas con un usuario en
+                Sixtina.com? Crea uno de forma sensilla.
+                Necesitaremos algunos datos para agilizar
+                tu compra.
+              </p>
+            </div>
+            <div class="registrate">
+              <form>
+                <button type="button" class="submit">CREAR CUENTA</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
