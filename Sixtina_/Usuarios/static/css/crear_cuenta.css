@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Avenir Next LT Pro Regular';
+  color: #8F8F8F;
+}
+
+body{
+  background-color: #FFFFFF;
+}
+header{
+  height: 120px;
+}
+.logo{
+  left: 90px;
+  top: 80px;
+  position:absolute;
+}
+.container{
+  left: 290px;
+  top: 200px;
+  position: absolute;
+}
+.container-2{
+  left:780px;
+  top:355px;
+  position: absolute;
+}
+
+input[type=email], input[type=password], input[type = text]{
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  padding-top: 50px;
+}

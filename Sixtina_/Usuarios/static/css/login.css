@@ -1,7 +1,6 @@
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Avenir Next LT Pro Regular';
   color: #8F8F8F;
 }
@@ -49,13 +48,13 @@ body{
   font-size: 17px;
 }
 .registrate{
-  margin-top: 110px;
+  margin-top: 105px;
   position: absolute;
 }
 .submit {
   width: 300px;
   height: 45px;
-  background-color: #595959;
+  background-color: #1A1A1A;
   border: none;
   color: #F5F5F5;
   text-align: center;

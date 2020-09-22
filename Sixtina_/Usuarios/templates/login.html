@@ -33,7 +33,7 @@
                 </form>
               </div>
               <div class="form-row">
-                <a href="#">¿Has olvidado tu contraseña</a>
+                <a href="#" style = "color: #515151;">¿Has olvidado tu contraseña</a>
               </div>
               <div class="form-row">
                 <form>
@@ -45,16 +45,16 @@
           <div class="col-3">
             <h1 class="inicio-sesion">REGÍSTRATE</h1>
             <div class="registro-msg">
-              <p>¿No cuentas con un usuario en
+              <p style="color: #515151;">¿No cuentas con un usuario en
                 Sixtina.com? Crea uno de forma sensilla.
                 Necesitaremos algunos datos para agilizar
                 tu compra.
               </p>
             </div>
             <div class="registrate">
-              <form>
-                <button type="button" class="submit" href = ''>CREAR CUENTA</button>
-              </form>
+              <a href="{% url crear_cuenta%}">
+              <button type="button" class="submit">CREAR CUENTA</button>
+              </a>
             </div>
           </div>
         </div>
