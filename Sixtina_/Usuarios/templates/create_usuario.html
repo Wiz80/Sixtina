@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crear.css' %}"/>
+    <title>Crear cuenta</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="{% static 'images/sixtina.png' %}">
+      </div>
+    </header>
+    <section class = "formulario">
+      <form action="{%url 'nuevo-usuario' %}" method="POST">
+        {% csrf_token %}
+        <div class="container">
+          {{form.as_p}}
+        </div>
+        <div class="boton">
+          <input type="submit" value="REGISTRAR" class="buton">
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
