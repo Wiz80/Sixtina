@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/crear.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crear_usuario.css' %}"/>
     <title>Crear cuenta</title>
   </head>
   <body>
@@ -13,55 +13,62 @@
       </div>
     </header>
     <section class = "formulario">
-      <div class="container-2">
-        <form>
+      <form action="{%url 'save-usuario' %}" method="GET">
+        <div class="container-2">
           <form>
             <input type="password" placeholder="Repetir contraseña">
           </form>
           <form>
-            <input type="text" placeholder="Apellidos">
+            <input type="text" placeholder="Apellidos" name = "apellidos">
           </form>
           <form>
-            <input type="text" placeholder="Número de documento">
+            <div class="numero">
+              <input type="text" placeholder="Número de documento" name = "documento">
+            </div>
           </form>
           <form>
-            <input type="text" placeholder="Municipio">
+            <input type="text" placeholder="Municipio" name = "municipio">
           </form>
           <form>
             <input type="text" placeholder="Info adicional (opcional)">
           </form>
-        </form>
-      </div>
-      <div class="container">
-        <h4 class = "msg">Escribe tus datos</h4>
-        <form>
+        </div>
+        <div class="container">
+          <h4 class = "msg">Escribe tus datos</h4>
           <form>
-            <input type="email" placeholder="E-mail">
+            <input type="email" placeholder="E-mail" name = "email">
           </form>
           <form>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" placeholder="Contraseña" name = "contraseña">
           </form>
           <form>
-            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Nombre" name = "nombre">
           </form>
           <form>
-            <input type="text" placeholder="Documento">
-          </form>
-          <select name="Documento">
-
-            <option>(CC) Cédula de ciudadania</option>
-
-            <option>(CE) Cédula extranjera</option>
-
-          </select>
-          <form>
-            <input type="text" placeholder="Departamento">
+            <div class="seleccion">
+              <label>Documento</label>
+              <select>
+                <option>(CC) Cédula de ciudadania</option>
+                <option>(CE) Cédula extranjera</option>
+              </select>
+            </div>
           </form>
           <form>
-            <input type="text" placeholder="Dirección">
+            <input type="text" placeholder="Departamento" name="departamento">
           </form>
-        </form>
-      </div>
+          <form>
+            <input type="text" placeholder="Dirección" name = "direccion">
+          </form>
+        </div>
+        <div class="politica">
+          <form>
+            <input type="radio"> He podido leer y entiendo la <a href = "#"> Política de Privacidad y Cookies</a>
+          </form>
+        </div>
+        <div class="boton">
+          <input type="submit" value="REGISTRAR" class="buton">
+        </div>
+      </form>
     </section>
   </body>
 </html>

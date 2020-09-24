@@ -21,6 +21,7 @@ from Usuarios import views as userviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', interviews.index, name = "Sixtina"),
-    path('crear/', userviews.crear, name = "crear_cuenta"),
-    path('login/', userviews.user, name = "Sixtina_Login"),
+    path('crear-usuario/', userviews.crear_usuario, name = "crear-usuario"),
+    path('login/', userviews.login, name = "login"),
+    path('save-usuario/', userviews.save_usuario, name = "save-usuario")
 ]

@@ -1,0 +1,76 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Proxima Nova Alt Regular';
+  color: #8F8F8F;
+}
+
+body{
+  background-color: #FFFFFF;
+}
+header{
+  height: 120px;
+}
+.logo{
+  left: 90px;
+  top: 80px;
+  position:absolute;
+}
+.seleccion{
+  display: inline-grid;
+  margin-top: 20px;
+}
+.numero{
+  margin-top: 5px;
+}
+.boton{
+  position: absolute;
+  margin-top: 30px;
+  left: 290px;
+  top: 700px;
+}
+.buton{
+  width: 300px;
+  height: 45px;
+  background-color: #1A1A1A;
+  border: none;
+  color: #F5F5F5;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.politica{
+  margin-top: 50px;
+  left: 290px;
+  top: 630px;
+  position: absolute;
+}
+label{
+  padding-top: 20px;
+  font-size: 12px;
+}
+select{
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+}
+.container{
+  left: 290px;
+  top: 200px;
+  position: absolute;
+}
+.container-2{
+  left:780px;
+  top:290px;
+  position: absolute;
+}
+
+input[type=email], input[type=password], input[type = text]{
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  padding-top: 50px;
+}
