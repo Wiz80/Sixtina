@@ -19,13 +19,6 @@ class FormUsuario(forms.Form):
     contraseña.widget.attrs.update({
         'placeholder': 'Contraseña'
     })
-    comprobar_contraseña = forms.CharField(
-        label = '',
-        widget=forms.PasswordInput(),
-        )
-    comprobar_contraseña.widget.attrs.update({
-        'placeholder': 'Repetir contraseña',
-    })
     nombre = forms.CharField(
         label = ''
     )
@@ -61,11 +54,11 @@ class FormUsuario(forms.Form):
     departamento.widget.attrs.update({
         'placeholder': 'Departamento'
     })
-    municipio = forms.CharField(
+    ciudad = forms.CharField(
         label = ''
     )
-    municipio.widget.attrs.update({
-        'placeholder': 'Municipio'
+    ciudad.widget.attrs.update({
+        'placeholder': 'Ciudad'
     })
     direccion = forms.CharField(
         label = ''

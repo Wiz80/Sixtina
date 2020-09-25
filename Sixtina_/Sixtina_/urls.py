@@ -20,8 +20,7 @@ from Usuarios import views as userviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', interviews.index, name = "Sixtina"),
+    path('<str:user>', interviews.index, name = "Sixtina"),
     path('nuevo-usuario/', userviews.nuevo_usuario, name = "nuevo-usuario"),
-    path('login/', userviews.login, name = "login"),
-    path('save-usuario/', userviews.save_usuario, name = "save-usuario"),
+    path('login/', userviews.login, name = "login")
 ]

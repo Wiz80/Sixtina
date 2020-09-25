@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/crear.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crear_usuario.css' %}"/>
     <title>Crear cuenta</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
     <section class = "formulario">
       <form action="{%url 'nuevo-usuario' %}" method="POST">
         {% csrf_token %}
-        <div class="container">
+        <div class="contenedor">
           {{form.as_p}}
         </div>
         <div class="boton">
@@ -24,4 +24,12 @@
       </form>
     </section>
   </body>
+  <footer>
+    <div class="container">
+      <img src="{% static 'images/facebook.png' %}" class="iconos">
+      <img src="{% static 'images/instagram.png' %}" class = "iconos">
+      <img src="{% static 'images/pinterest.png' %}" class = "iconos">
+      <img src="{% static 'images/twitter.png' %}" class = "iconos">
+    </div>
+  </footer>
 </html>

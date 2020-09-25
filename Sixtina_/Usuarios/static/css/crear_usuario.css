@@ -26,11 +26,11 @@ select{
   color: #8F8F8F;
 }
 .boton{
-  top: 900px;
-  left: 290px;
+  top: 1060px;
+  left: 325px;
   position: absolute;
 }
-.container{
+.contenedor{
   left: 325px;
   top: 200px;
   position: absolute;
@@ -44,4 +44,33 @@ input[type=email], input[type=password], input[type = text], input[type = number
   border-bottom: 1px solid #707070;
   outline: none;
   padding-top: 50px;
+}
+.buton{
+  width: 350px;
+  height: 45px;
+  background-color: #1A1A1A;
+  border: none;
+  color: #F5F5F5;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Proxima Nova Regular';
+  font-size: 18px;
+}
+footer{
+  width: 100%;
+  top: 1200px;
+  position: absolute;
+}
+
+.container{
+  padding-left:250px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+.iconos{
+  width: 25px;
+  height: 25px;
+  padding-left: 150px;
 }

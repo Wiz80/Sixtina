@@ -10,6 +10,6 @@ class Usuario(models.Model):
     documento = models.TextField(default = '(CC) Cédula de ciudadania')
     numero_documento = models.IntegerField()
     departamento = models.TextField()
-    municipio = models.TextField()
+    ciudad = models.TextField()
     direccion = models.TextField(default = 'null')
     info = models.TextField(default = 'null')
