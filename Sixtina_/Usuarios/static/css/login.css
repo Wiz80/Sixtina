@@ -66,12 +66,13 @@ body{
   text-decoration: none;
   display: inline-block;
   font-family: 'Proxima Nova Regular';
-  font-size: 17px;
-  cursor: pointer;
+  font-size: 15px;
 }
-input[type=email], input[type=password]{
+input[type=email],input[type=email], input[type=password]{
   width: 300px;
   border: none;
   border-bottom: 1px solid #707070;
   outline: none;
+  font-size: 17px;
+  cursor: pointer;
 }
