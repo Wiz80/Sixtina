@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
-user = None
+user = 'non'
 def index(request):
     return render(request, 'index.html',{
-        'user':user
+        'user': user
     })

@@ -13,10 +13,10 @@
           <img src = "{%static 'images/mas.png'%}"/>
         </div>
         <div class = 'iniciar_sesion'>
-          {% if user %}
+          {% if user == 'non' %}
           <a href = 'login/' style  = "padding-right: 30px;">INICIAR SESION</a>
           {% else %}
-          <p style  = "padding-right: 30px;">{{user.nombre}}</p>
+          <p style  = "padding-right: 30px;">{{user}}</p>
           {% endif %}
         </div>
         <div class = 'buscar'>

@@ -46,7 +46,7 @@ input[type=email], input[type=password], input[type = text], input[type = number
   padding-top: 50px;
 }
 .buton{
-  width: 300px;
+  width: 350px;
   height: 45px;
   background-color: #1A1A1A;
   border: none;
@@ -55,10 +55,22 @@ input[type=email], input[type=password], input[type = text], input[type = number
   text-decoration: none;
   display: inline-block;
   font-family: 'Proxima Nova Regular';
-  font-size: 20px;
+  font-size: 17px;
 }
 footer{
   width: 100%;
   top: 1200px;
-  position: absolute; 
+  position: absolute;
+}
+
+.container{
+  padding-left:250px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+.iconos{
+  width: 25px;
+  height: 25px;
+  padding-left: 150px;
 }

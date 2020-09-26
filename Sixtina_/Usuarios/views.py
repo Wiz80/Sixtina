@@ -36,7 +36,9 @@ def nuevo_usuario(request):
                 info = info
             )
             user.save()
-            return redirect('Sixtina', user = user.nombre)
+            return render(request, 'index.html',{
+                'user': user.nombre
+            })
     else:
         formulario = FormUsuario()
 
