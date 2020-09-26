@@ -6,6 +6,11 @@ body{
     font-family: 'Proxima Nova Regular';
     font-size: 12px;
 }
+.usuario{
+  font-size: 13px;
+  color: #707070
+}
+
 .contenedor{
     position: absolute;
     text-align: center;
@@ -22,7 +27,12 @@ a{
 .iniciar_sesion{
     position: absolute;
     top: 10.3%;
-    left: 75%;
+    left: 72%;
+}
+.bag{
+  position: absolute;
+  top: 9%;
+  left: 80%;
 }
 .buscar{
     position: absolute;

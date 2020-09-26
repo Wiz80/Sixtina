@@ -1,63 +1,54 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Avenir Next LT Pro Regular';
+  font-family: 'Proxima Nova Regular';
   color: #8F8F8F;
+  font-size: 14px;
 }
+
 body{
   background-color: #FFFFFF;
 }
-.mas{
-  position: absolute;
-  top: 10%;
-  left: 8%;
+header{
+  height: 120px;
 }
-.col-1{
-  width: 530px;
-  height: 100%;
-  position: absolute;
-  padding: 0;
-  margin: 0;
+.logo{
+  margin-top: 80px;
+  margin-left: 90px;
 }
-.zeus-img{
-  padding-top: 10px;
+.forms{
+  font-size: 17px;
 }
-.col-2{
-  left: 580px;
-  top: 230px;
-  position: absolute;
-}
-.col-3{
-  left: 970px;
-  top: 230px;
-  position: absolute;
-}
-.inicio-sesion{
-  font-size: 20px;
-  padding-bottom: 43px;
-  font-family: 'Proxima Nova Regular'
-}
-
-.form-row{
-  padding-bottom: 43px;
-}
-.Sixtina{
-  left: 580px;
-  top: 120px;
-  position: absolute;
-}
-.registro-msg{
+select{
   width: 350px;
-  height: 80px;
-  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  padding-top: 50px;
+  color: #8F8F8F;
 }
-.registrate{
-  font-size: 20px;
-  margin-top: 105px;
+.boton{
+  top: 970px;
+  left: 325px;
   position: absolute;
 }
-.submit {
-  width: 300px;
+.contenedor{
+  left: 325px;
+  top: 200px;
+  position: absolute;
+}
+input[type = text] apellidos{
+  padding-bottom: 50px;
+}
+input[type=email], input[type=password], input[type = text], input[type = number]{
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  padding-top: 50px;
+}
+.buton{
+  width: 350px;
   height: 45px;
   background-color: #1A1A1A;
   border: none;
@@ -66,22 +57,22 @@ body{
   text-decoration: none;
   display: inline-block;
   font-family: 'Proxima Nova Regular';
-<<<<<<< HEAD:Sixtina_/Usuarios/static/css/nuevo_usuario.css
   font-size: 15px;
 }
-input[type=email]{
-  width: 300px;
-  border: none;
-  border-bottom: 1px solid #707070;
-  outline: none;
-=======
-  font-size: 17px;
-  cursor: pointer;
->>>>>>> Usuarios:Sixtina_/Usuarios/static/css/login.css
+footer{
+  width: 100%;
+  top: 1100px;
+  position: absolute;
 }
-input[type=email], input[type=password]{
-  width: 300px;
-  border: none;
-  border-bottom: 1px solid #707070;
-  outline: none;
+
+.container{
+  padding-left:250px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+.iconos{
+  width: 25px;
+  height: 25px;
+  padding-left: 150px;
 }

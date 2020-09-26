@@ -16,6 +16,7 @@
       <form action="{%url 'nuevo-usuario' %}" method="POST">
         {% csrf_token %}
         <div class="contenedor">
+          <h1 class="forms">Escribe tus datos personales</h1>
           {{form.as_p}}
         </div>
         <div class="boton">

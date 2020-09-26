@@ -37,7 +37,7 @@ def nuevo_usuario(request):
             )
             user.save()
             return render(request, 'index.html',{
-                'user': user.nombre
+                'user': user.nombre.upper()
             })
     else:
         formulario = FormUsuario()
