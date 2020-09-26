@@ -1,7 +1,6 @@
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Avenir Next LT Pro Regular';
   color: #8F8F8F;
 }
@@ -14,29 +13,33 @@ body{
   left: 8%;
 }
 .col-1{
-  width: 500px;
+  width: 530px;
   height: 100%;
   position: absolute;
   padding: 0;
   margin: 0;
-  padding-top: 7px;
+}
+.zeus-img{
+  padding-top: 10px;
 }
 .col-2{
   left: 580px;
   top: 230px;
   position: absolute;
 }
-.inicio-sesion{
-  padding-bottom: 43px;
-  font-family: 'Proxima Nova Regular'
-}
-.form-row{
-  padding-bottom: 43px;
-}
 .col-3{
   left: 970px;
   top: 230px;
   position: absolute;
+}
+.inicio-sesion{
+  font-size: 20px;
+  padding-bottom: 43px;
+  font-family: 'Proxima Nova Regular'
+}
+
+.form-row{
+  padding-bottom: 43px;
 }
 .Sixtina{
   left: 580px;
@@ -46,31 +49,27 @@ body{
 .registro-msg{
   width: 350px;
   height: 80px;
-  font-size: 17px;
+  font-size: 15px;
 }
 .registrate{
-  margin-top: 110px;
+  font-size: 20px;
+  margin-top: 105px;
   position: absolute;
 }
 .submit {
   width: 300px;
   height: 45px;
-  background-color: #595959;
+  background-color: #1A1A1A;
   border: none;
   color: #F5F5F5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: 'Proxima Nova Regular';
-  font-size: 15px;
+  font-size: 17px;
+  cursor: pointer;
 }
-input[type=email]{
-  width: 300px;
-  border: none;
-  border-bottom: 1px solid #707070;
-  outline: none;
-}
-input[type=password] {
+input[type=email], input[type=password]{
   width: 300px;
   border: none;
   border-bottom: 1px solid #707070;

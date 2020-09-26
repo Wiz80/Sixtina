@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>SIXTINA</title>
-    <link rel="stylesheet" href="{%static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{%static 'css/layout.css' %}">
 </head>
 <body>
     <div class = "contenedor">
@@ -13,7 +13,11 @@
           <img src = "{%static 'images/mas.png'%}"/>
         </div>
         <div class = 'iniciar_sesion'>
-        <a href = 'login/' style  = "padding-right: 30px;">INICIAR SESION</a>
+          {% if user == 'non' %}
+          <a href = 'login/' style  = "padding-right: 30px;">INICIAR SESION</a>
+          {% else %}
+          <p style  = "padding-right: 30px;">{{user}}</p>
+          {% endif %}
         </div>
         <div class = 'buscar'>
         <img src = "{%static 'images/Buscar.png'%}" />
