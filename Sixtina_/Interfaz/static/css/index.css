@@ -68,7 +68,24 @@ a{
   left: 0px;
   display: none;
 }
-
+#box:target{
+  display: block;
+}
+a:hover{
+  color: #3D3D3D;
+}
+.lista2{
+  position: absolute;
+  top: 222px;
+  left: 165px;
+  font-size: 14px;
+  display: none;
+}
+#box #lista2:target{
+  display: block;
+  transform: translate(-10px);
+  transition-duration: all .5s;
+}
 .logo{
   position: absolute;
   top: 40px;
