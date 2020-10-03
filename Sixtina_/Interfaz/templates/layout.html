@@ -3,12 +3,35 @@
 <html>
 <head>
     <title>SIXTINA</title>
-    <link rel="stylesheet" href="{%static 'css/index.css' %}">
+    <link rel="stylesheet" href="{%static 'css/layout.css' %}">
 </head>
 <body>
     <div class = "contenedor">
         {% block interfaz %}
         {% endblock %}
+        <div class="box">
+          <div class="logo">
+            <img src="{%static 'images/sixtina_3.png'%}">
+          </div>
+          <div class="mujer-box">
+            <a href="#">MUJER</a>
+          </div>
+          <div class="separador">
+            <p>|</p>
+          </div>
+          <div class="hombre-box">
+            <a href="#">HOMBRE</a>
+          </div>
+          <div class="lista">
+            <ul>
+              <li>Novedades</li>
+              <li>Ropa</li>
+              <li>Accesorios</li>
+              <li>Descuentos</li>
+              <li>Más +</li>
+            </ul>
+          </div>
+        </div>
         <div class = "mas">
           <img src = "{%static 'images/mas.png'%}"/>
         </div>
