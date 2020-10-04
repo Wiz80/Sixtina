@@ -69,7 +69,7 @@ a{
   top: 0px;
   left: 0px;
   display: none;
-  transition:
+  transition-duration: 2s;
 }
 
 a:hover{
