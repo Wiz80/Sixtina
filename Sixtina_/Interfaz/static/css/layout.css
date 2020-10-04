@@ -19,10 +19,12 @@ body{
   position: absolute;
   top: 10%;
   left: 8%;
+  cursor: pointer;
 }
 a{
     text-decoration: none;
     color: #707070;
+    cursor: pointer;
 }
 .iniciar_sesion{
     position: absolute;
@@ -67,10 +69,9 @@ a{
   top: 0px;
   left: 0px;
   display: none;
+  transition:
 }
-#box:target{
-  display: block;
-}
+
 a:hover{
   color: #3D3D3D;
 }
