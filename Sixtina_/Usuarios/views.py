@@ -1,12 +1,33 @@
 from django.shortcuts import render, HttpResponse, redirect
 from Usuarios.models import Usuario
 from Usuarios.forms import FormUsuario
+from Usuarios.forms import FormLogin
+
 # Create your views here.
 def login(request):
-    return render(request, 'login.html')
+    if request.method == 'POST':
+        formulario = FormLogin(request.POST)
+        if formulario.is_valid():
+            data_form = formulario.cleaned_data
+            email = data_form.get('email')
+            contraseña = data_form.get('contraseña')
+            user = Usuario.objects.get(email=email, contraseña=contraseña)
+            if user:
+                return redirect('/',{
+                    'user':user.nombre.upper()
+                })
+            else:
+                formulario = FormLogin()
+                return render(request, 'login.html',{
+                    'form': formulario,
+                    'msg': 'Su dirección E-mail o su contraseña no coinciden'
+                })
+    else:
+        formulario = FormLogin()
+    return render(request, 'login.html',{
+        'form': formulario
+    })
 
-def crear_usuario(request):
-    return render(request, 'crear.html')
 
 def nuevo_usuario(request):
 

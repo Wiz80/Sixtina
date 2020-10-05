@@ -69,7 +69,7 @@ a{
   top: 0px;
   left: 0px;
   display: none;
-  transition-duration: 2s;
+  transition-duration:all 2s;
 }
 
 a:hover{
@@ -81,11 +81,6 @@ a:hover{
   left: 165px;
   font-size: 14px;
   display: none;
-}
-#box #lista2:target{
-  display: block;
-  transform: translate(-10px);
-  transition-duration: all .5s;
 }
 .logo{
   position: absolute;

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/log.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
   </head>
   <body>
     <div class = "mas">
@@ -21,24 +21,19 @@
           </div>
           <div class="col-2">
             <h1 class="inicio-sesion">INICIA SESIÓN</h1>
-            <form>
-              <div class="form-row">
-                <form>
-                  <input type="email" class="form-control" placeholder="E-mail">
-                </form>
-              </div>
-              <div class="form-row">
-                <form>
-                  <input type="password" class="form-control" placeholder="Contraseña">
-                </form>
-              </div>
+            <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+              {% if msg %}
+                {{form.as_p}}
+                <h2>{{msg}}</h2>
+              {% else %}
+                {{form.as_p}}
+              {% endif %}
               <div class="form-row">
                 <a href="#" style = "color: #515151;font-size:15px;text-decoration: none">¿Has olvidado tu contraseña</a>
               </div>
               <div class="form-row">
-                <form>
-                  <button type="button" class="submit">INICIAR SESIÓN</button>
-                </form>
+                <input type="submit" class="submit" value="INICIAR SESIÓN">
               </div>
             </form>
           </div>
