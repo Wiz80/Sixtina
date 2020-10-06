@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/log.css' %}"/>
   </head>
   <body>
     <div class = "mas">
@@ -25,12 +25,12 @@
               {% csrf_token %}
               {% if msg %}
                 {{form.as_p}}
-                <h2>{{msg}}</h2>
+                <h5>{{msg}}</h5>
               {% else %}
                 {{form.as_p}}
               {% endif %}
               <div class="form-row">
-                <a href="#" style = "color: #515151;font-size:15px;text-decoration: none">¿Has olvidado tu contraseña</a>
+                <a href="#" style = "color: #515151;font-size:15px;text-decoration: none">¿Has olvidado tu contraseña?</a>
               </div>
               <div class="form-row">
                 <input type="submit" class="submit" value="INICIAR SESIÓN">

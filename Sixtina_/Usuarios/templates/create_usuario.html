@@ -18,6 +18,9 @@
         <div class="contenedor">
           <h1 class="forms">Escribe tus datos personales</h1>
           {{form.as_p}}
+          {% if msg %}
+            <h1>{{msg}}</h1>
+          {% endif %}
         </div>
         <div class="boton">
           <input type="submit" value="REGISTRAR" class="buton">
