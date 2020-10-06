@@ -23,6 +23,4 @@ urlpatterns = [
     path('', interviews.index, name = "Sixtina"),
     path('nuevo-usuario/', userviews.nuevo_usuario, name = "nuevo-usuario"),
     path('login/', userviews.login, name = "login"),
-    path('hombre/',interviews.hombre, name = "hombre"),
-    path('mujer/', interviews.mujer, name = "mujer")
 ]
