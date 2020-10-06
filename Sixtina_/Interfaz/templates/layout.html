@@ -4,7 +4,26 @@
 <head>
     <title>SIXTINA</title>
     <link rel="stylesheet" href="{%static 'css/layout.css' %}">
-    <script src = "{% static 'js/box.js' %}"></script>
+    <script>
+      function abrirBox(){
+        document.getElementById("box").style.display = "block";
+      }
+      function cerrarBox(){
+        document.getElementById("box").style.display = "none";
+      }
+      function mantenerBox(){
+        document.getElementById("box").style.display = "block";
+      }
+      function abrirBox2(){
+        document.getElementById("lista2").style.display = "block";
+      }
+      function cerrarBox2(){
+        document.getElementById("lista2").style.display = "none";
+      }
+      function mantenerBox2(){
+        document.getElementById("lista2").style.display = "block";
+      }
+    </script>
 </head>
 <body>
     <div class = "contenedor">
@@ -15,44 +34,25 @@
             <img src="{%static 'images/sixtina_3.png'%}">
           </div>
           <div class="mujer-box">
-            <a href="#Hombre">MUJER</a>
+            <a href="{% url 'mujer' %}">MUJER</a>
           </div>
           <div class="separador">
             <p>|</p>
           </div>
           <div class="hombre-box">
-            <a href="#Mujer">HOMBRE</a>
+            <a href="{% url 'hombre' %}">HOMBRE</a>
           </div>
           <div class="lista">
             <ul>
               <li><a href="#">Novedades</a></li>
-              <li><a onmouseover="abrirBox2()" onclick="">Ropa</a></li>
+              <li><a onmouseover="abrirBox2()" onclick="mantenerBox2()">Ropa</a></li>
               <li><a href="#">Accesorios</a></li>
               <li><a href="#">Descuentos</a></li>
               <li><a href="#">Más +</a></li>
             </ul>
           </div>
-          <div id = "Hombre" class="lista2" onmouseover="mantenerBox2()" onmouseout="cerrarBox2()">
-            <ul>
-              <li><a href="#">Camisetas</a></li>
-              <li><a href="#">Chaquetas</a></li>
-              <li><a href="#">Pantalones y Jeans</a></li>
-              <li><a href="#">Camisas</a></li>
-              <li><a href="#">Sudaderas</a></li>
-              <li><a href="#">Sudaderas</a></li>
-            </ul>
-          </div>
-          <div id = "Mujer" class="lista2" onmouseover="mantenerBox2()" onmouseout="cerrarBox2()">
-            <ul>
-              <li><a href="#">Camisetas</a></li>
-              <li><a href="#">Vestidos</a></li>
-              <li><a href="#">Pantalones y Jeans</a></li>
-              <li><a href="#">Chaquetas</a></li>
-              <li><a href="#">Blusas y camisas</a></li>
-              <li><a href="#">Sudaderas</a></li>
-              <li><a href="#">Faldas</a></li>
-            </ul>
-          </div>
+          {% block genero %}
+          {% endblock %}
         </div>
         <div class = "mas">
           <a onmouseover="abrirBox()"><img src = "{%static 'images/mas.png'%}"/></a>
