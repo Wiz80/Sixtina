@@ -4,26 +4,7 @@
 <head>
     <title>SIXTINA</title>
     <link rel="stylesheet" href="{%static 'css/layout.css' %}">
-    <script>
-      function abrirBox(){
-        document.getElementById("box").style.display = "block";
-      }
-      function cerrarBox(){
-        document.getElementById("box").style.display = "none";
-      }
-      function mantenerBox(){
-        document.getElementById("box").style.display = "block";
-      }
-      function abrirBox2(){
-        document.getElementById("lista2").style.display = "block";
-      }
-      function cerrarBox2(){
-        document.getElementById("lista2").style.display = "none";
-      }
-      function mantenerBox2(){
-        document.getElementById("lista2").style.display = "block";
-      }
-    </script>
+    <script src = "{% static 'js/box.js' %}"></script>
 </head>
 <body>
     <div class = "contenedor">
@@ -58,10 +39,10 @@
           <a onmouseover="abrirBox()"><img src = "{%static 'images/mas.png'%}"/></a>
         </div>
         <div class = 'iniciar_sesion'>
-          {% if user == 'non' %}
-          <a href = "{% url 'login' %}" style  = "padding-right: 20px;">INICIAR SESION</a>
-          {% else %}
+          {% if user is not None%}
           <h1 style  = "padding-right: 20px;" class = "usuario">{{user}}</h1>
+          {% else %}
+          <a href = "{% url 'login' %}" style  = "padding-right: 20px;">INICIAR SESION</a>
           {% endif %}
         </div>
         <img src="{% static 'images/shopping-bag.png' %}" class="bag">

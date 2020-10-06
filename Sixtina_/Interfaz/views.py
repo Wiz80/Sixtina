@@ -1,16 +1,29 @@
 from django.shortcuts import render, HttpResponse
+from Usuarios.models import Usuario
 
-user = 'non'
+user = None
 def index(request):
-    return render(request, 'index.html',{
-        'user': user
-    })
+    try:
+        if user is not None:
+            
+        return render(request, 'index.html',{
+            'user':user
+        })
+    except:
+        return render(request, 'index.html')
+
 def hombre(request):
-    return render(request, 'hombre.html',{
-        'user': user
-    })
+    try:
+        return render(request, 'hombre.html',{
+            'user': user
+        })
+    except:
+        return render(request, 'hombre.html')
 
 def mujer(request):
-    return render(request, 'mujer.html',{
-        'user': user
-    })
+    try:
+        return render(request, 'mujer.html',{
+            'user': user
+        })
+    except:
+        return render(request, 'mujer.html')
