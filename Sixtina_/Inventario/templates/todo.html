@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block titulo%}
+      {% endblock %}
+    </title>
+    <link href="{% static 'css/layout.css' %}">
+    <script src = "{% static 'js/box.js'%}"></script>
+  </head>
+  <body>
+    <div class = "contenedor">
+      {% block interfaz %}
+      {% endblock %}
+      <div class="box" id = "box" onmouseout="cerrarBox()" onmouseover="mantenerBox()">
+        <div class="logo">
+          <img src="{%static 'images/sixtina_3.png'%}">
+        </div>
+        <div class="mujer-box">
+          <a href="{% url 'mujer' %}">MUJER</a>
+        </div>
+        <div class="separador">
+          <p>|</p>
+        </div>
+        <div class="hombre-box">
+          <a href="{% url 'hombre' %}">HOMBRE</a>
+        </div>
+        <div class="lista">
+          <ul>
+            <li><a href="#">Novedades</a></li>
+            <li><a onmouseover="abrirBox2()" onclick="mantenerBox2()">Ropa</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Descuentos</a></li>
+            <li><a href="#">Más +</a></li>
+          </ul>
+        </div>
+        {% block genero %}
+        {% endblock %}
+      </div>
+      <div class = "mas">
+        <a onmouseover="abrirBox()"><img src = "{%static 'images/mas.png'%}"/></a>
+      </div>
+    </div>
+  </body>
+</html>

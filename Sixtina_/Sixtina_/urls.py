@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from Interfaz import views as interviews
 from Usuarios import views as userviews
-
+from Inventario import views as inverviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', interviews.index, name = "Sixtina"),
     path('nuevo-usuario/', userviews.nuevo_usuario, name = "nuevo-usuario"),
     path('login/', userviews.login, name = "login"),
     path('hombre/',interviews.hombre, name = "hombre"),
-    path('mujer/', interviews.mujer, name = "mujer")
+    path('mujer/', interviews.mujer, name = "mujer"),
+    path('inventario/', inverviews.inventario, name = "inventario")
 ]
