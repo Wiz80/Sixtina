@@ -1,3 +1,5 @@
+var click = localStorage.getItem("click");
+
 function abrirBox(){
   document.getElementById("box").style.display = "block";
 }
@@ -15,4 +17,8 @@ function cerrarBox2(){
 }
 function mantenerBox2(){
   document.getElementById("lista2").style.display = "block";
+}
+function cambiarPropiedades(id_click){
+  document.getElementById(id_click.id).fontWeight = click;
+  localStorage.setItem("click", click)
 }

@@ -2,27 +2,31 @@ from django.shortcuts import render, HttpResponse, redirect
 from Usuarios.models import Usuario
 from Usuarios.forms import FormUsuario
 from Usuarios.forms import FormLogin
-from django.contrib.auth import authenticate, login, logout
 import hashlib
 
 # Create your views here.
 def login(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
-        contraseña = request.POST.get('contraseña')
-        cifrado = hashlib.sha256()
-        cifrado.update(contraseña.encode('utf8'))
-        user = authenticate(request, email = email, password = cifrado)
-        if user is not None:
-            return render(request, 'index.html', {
-                'user': user.nombre.upper(),
-                'usuario': user
-            })
-        else:
-            return render(request, 'login.html', {
-                'form': formulario,
-                'msg': 'Su E-mail o contraseña no coinciden'
-            })
+        formulario = FormLogin(request.POST)
+        if formulario.is_valid():
+            data_form = formulario.cleaned_data
+            email = data_form.get('email')
+            contraseña = data_form.get('contraseña')
+            cifrado = hashlib.sha256()
+            cifrado.update(contraseña.encode('utf8'))
+            try:
+                user = Usuario.objects.get(email=email, contraseña=cifrado.hexdigest())
+            except:
+                user = False
+            if user:
+                return render(request, 'mujer.html',{
+                    'user': user
+                })
+            else:
+                return render(request, 'login.html', {
+                    'form': formulario,
+                    'msg': 'Su E-mail o contraseña no coinciden'
+                })
     else:
         formulario = FormLogin()
     return render(request, 'login.html',{
@@ -74,9 +78,8 @@ def nuevo_usuario(request):
                 })
             else:
                 user.save()
-                return redirect('/',{
-                    'user': user.nombre.upper(),
-                    'usuario': user
+                return render(request, 'mujer.html',{
+                    'user': user
                 })
     else:
         formulario = FormUsuario()
