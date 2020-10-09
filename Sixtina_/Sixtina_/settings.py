@@ -33,7 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'Interfaz',
     'Usuarios',
-    'Inventario',
+    'Clothes',
+    'Hombre',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -142,6 +143,8 @@ STATICFILES_FINDERS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Usuarios/static"),
     os.path.join(BASE_DIR, "Interfaz/static"),
+    os.path.join(BASE_DIR, "Hombre/static"),
+    os.path.join(BASE_DIR, "Clothes/static")
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")

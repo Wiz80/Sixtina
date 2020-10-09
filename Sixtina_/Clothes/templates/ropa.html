@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/ropa.css' %}">
+  </head>
+  <body>
+    <div class = "contenedor">
+      <header>
+        <div class="logo-box">
+          <div class="logo">
+            <img src="{%static 'images/sixtina_3.png'%}">
+          </div>
+        </div>
+      </header>
+      <div class="box" id = "box">
+        <div class="mujer-box">
+          <a href="{% url 'mujer' %}" style="color:#929292;">MUJER</a>
+        </div>
+        <div class="separador">
+          <p style = "color: #929292;">|</p>
+        </div>
+        <div class="hombre-box">
+          <a href="{% url 'camisetas-hombre' %}" style = "font-weight: bold;color:#929292;">HOMBRE</a>
+        </div>
+        <div class="lista">
+          <ul>
+            <li><a href="#">Novedades</a></li>
+            <li><a onclick="abrir_lista2()" onmouseover="mantener_lista2()" style="cursor: pointer; font-weight: bold;">Ropa</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Descuentos</a></li>
+            <li><a href="#">Más +</a></li>
+          </ul>
+        </div>
+        {% block lista_extend %}
+        {% endblock %}
+      </div>
+      <div class = "mas">
+        <a><img src = "{%static 'images/mas.png'%}"/></a>
+      </div>
+      {% block ropa %}
+      {% endblock %}
+    </div>
+    <img src="{% static 'images/shopping-bag.png' %}" class="bag">
+    <script type="text/javascript">
+      function mantener_lista2(){
+        document.getElementById("lista2").style.display = "block";
+      }
+      function cerrar_lista2(){
+        document.getElementById("lista2").style.display = "none";
+      }
+      function abrir_lista2(){
+        document.getElementById("lista2").style.display = "block";
+      }
+      function me_gusta(este_no, este_si){
+        document.getElementById(este_si).style.display = "block";
+        document.getElementById(este_no.id).style.display = "none";
+      }
+      function no_me_gusta(este_no, este_si){
+        document.getElementById(este_no.id).style.display = "none";
+        document.getElementById(este_si).style.display = "block";
+      }
+    </script>
+  </body>
+</html>

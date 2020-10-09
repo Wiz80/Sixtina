@@ -15,13 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from Interfaz import views as interviews
 from Usuarios import views as userviews
+from Clothes import views as ropaviews
+from Hombre import views as homviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('nuevo-usuario/', userviews.nuevo_usuario, name = "nuevo-usuario"),
     path('login/', userviews.login, name = "login"),
     path('hombre/',interviews.hombre, name = "hombre"),
-    path('', interviews.mujer, name = "mujer")
+    path('', interviews.mujer, name = "mujer"),
+    path('ropa/', ropaviews.ropa, name = "ropa"),
+    path('camisetas-hombre/', homviews.camisetas, name = "camisetas-hombre")
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

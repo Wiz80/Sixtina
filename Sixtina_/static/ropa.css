@@ -6,11 +6,6 @@ body{
     font-family: 'Proxima Nova Regular';
     font-size: 12px;
 }
-.usuario{
-  font-size: 13px;
-  color: #707070
-}
-
 .contenedor{
   position: absolute;
   color: #707070
@@ -21,45 +16,11 @@ body{
   left: 8%;
   cursor: pointer;
 }
-a{
-    text-decoration: none;
-    color: #707070;
-    cursor: pointer;
-}
-.iniciar_sesion{
-    position: absolute;
-    top: 10.3%;
-    left: 72%;
-}
 .bag{
   position: absolute;
   top: 9%;
   left: 80%;
 }
-.buscar{
-    position: absolute;
-    top: 10%;
-    left: 85%;
-}
-
-.mujer{
-    position: absolute;
-    top: 50%;
-    left: 1253px;
-}
-
-.hombre{
-    position: absolute;
-    top: 50%;
-    left: 8%;
-}
-
-.new{
-    position: absolute;
-    top: 598px;
-    left: 662px;
-}
-
 .box{
   background-color: #ffffff;
   position: absolute;
@@ -68,9 +29,12 @@ a{
   height: 100%;
   top: 0px;
   left: 0px;
-  display: none;
+  display: block;
+  transition-duration:all 2s;
 }
-
+a{
+  text-decoration: none;
+}
 a:hover{
   color: #3D3D3D;
 }

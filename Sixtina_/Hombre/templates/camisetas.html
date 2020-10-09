@@ -1,0 +1,38 @@
+{% extends "ropa.html" %}
+{% load static %}
+{% block ropa %}
+  {% if camisetas %}
+    <div class="toute">
+      {% for i in contador %}
+        <div class="horizontal">
+          {% for camiseta in camisetas%}
+            {% if  i == 0 and camiseta.Idn <= 4 or i == 1 and camiseta.Idn >= 5%}
+              <div class="boxClothes">
+                <div class="imageClothes">
+                  <img src="{{camiseta.imagen_1.url}}" class="contenido">
+                </div>
+                <div class="descripcion">
+                  <h6>{{camiseta.Titulo}}</h6>
+                  <h6 style="color: #2D2C2C;">${{camiseta.Precio}}</h6>
+                  <img src="{%static 'images/corazon.png' %}" class="corazon" id= "corazon{{camiseta.Idn}}vacio" onclick="me_gusta(this, 'corazon{{camiseta.Idn}}relleno')">
+                  <img src="{%static 'images/corazon_1.png' %}" class="corazon1" id = "corazon{{camiseta.Idn}}relleno" onclick="no_me_gusta(this,'corazon{{camiseta.Idn}}vacio')">
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {%endfor%}
+    </div>
+  {%endif%}
+{% endblock %}
+{% block lista_extend %}
+<div class="lista2" id = "lista2" onmouseover="mantener_lista2()" onmouseout="cerrar_lista2()">
+  <ul>
+    <li><a href="#">Chaquetas</a></li>
+    <li><a href="#">Pantalones y Jeans</a></li>
+    <li><a href="{% url 'camisetas-hombre'%}" style="font-weight: bold">Camisas</a></li>
+    <li><a href="#">Sudaderas</a></li>
+    <li><a href="#">Sudaderas</a></li>
+  </ul>
+</div>
+{% endblock %}
