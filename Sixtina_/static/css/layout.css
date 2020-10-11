@@ -12,25 +12,29 @@ body{
 }
 
 .contenedor{
-    position: absolute;
-    text-align: center;
+  position: absolute;
+  color: #707070
 }
 .mas{
   position: absolute;
   top: 10%;
   left: 8%;
-}
-.bag{
-  padding-top: 2px;
+  cursor: pointer;
 }
 a{
     text-decoration: none;
     color: #707070;
+    cursor: pointer;
 }
 .iniciar_sesion{
     position: absolute;
     top: 10.3%;
     left: 72%;
+}
+.bag{
+  position: absolute;
+  top: 9%;
+  left: 80%;
 }
 .buscar{
     position: absolute;
@@ -54,4 +58,58 @@ a{
     position: absolute;
     top: 598px;
     left: 662px;
+}
+
+.box{
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1;
+  width: 330px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+a:hover{
+  color: #3D3D3D;
+}
+.lista2{
+  position: absolute;
+  top: 222px;
+  left: 165px;
+  font-size: 14px;
+  display: none;
+}
+.logo{
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
+.mujer-box{
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+.separador{
+  position: absolute;
+  top: 100px;
+  left: 124px;
+}
+.hombre-box{
+  position: absolute;
+  top: 100px;
+  left: 170px;
+}
+.lista{
+  position: absolute;
+  top: 190px;
+  left: 40px;
+  font-size: 14px;
+}
+ul{
+  list-style: none;
+}
+li{
+  padding-top: 15px;
 }

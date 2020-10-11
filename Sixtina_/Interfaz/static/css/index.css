@@ -18,13 +18,14 @@ body{
 .mas{
   position: absolute;
   top: 10%;
-  left: 8%;
+  left: 7%;
   cursor: pointer;
 }
 a{
     text-decoration: none;
     color: #707070;
     cursor: pointer;
+    font-weight: bold;
 }
 .iniciar_sesion{
     position: absolute;
@@ -45,19 +46,19 @@ a{
 .mujer{
     position: absolute;
     top: 50%;
-    left: 1253px;
+    left: 91%;
 }
 
 .hombre{
     position: absolute;
     top: 50%;
-    left: 8%;
+    left: 7%;
 }
 
 .new{
     position: absolute;
-    top: 598px;
-    left: 662px;
+    top: 90%;
+    left: 737px;
 }
 
 .box{
@@ -76,9 +77,8 @@ a:hover{
 }
 .lista2{
   position: absolute;
-  top: 222px;
+  top: 160px;
   left: 165px;
-  font-size: 14px;
   display: none;
 }
 .logo{
@@ -103,9 +103,8 @@ a:hover{
 }
 .lista{
   position: absolute;
-  top: 190px;
+  top: 130px;
   left: 40px;
-  font-size: 14px;
 }
 ul{
   list-style: none;

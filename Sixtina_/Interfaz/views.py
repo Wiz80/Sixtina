@@ -43,6 +43,6 @@ def mujer(request):
             'user': user
         })
     else:
-        return render(request, 'hombre.html',{
+        return render(request, 'mujer.html',{
             'user': user
         })

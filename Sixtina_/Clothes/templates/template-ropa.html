@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/template.css'%}">
+    <title>{{Camiseta.Idn}}</title>
+  </head>
+  <body>
+    <div class="principal-img">
+      <img src="{% static 'images/Camiseta1.png' %}" alt="">
+    </div>
+    {% block image_principal %}
+    {% endblock %}
+    <div class="sub-img">
+      <div class="sub-img-1">
+        <img src="{% static 'images/Camiseta1.png' %}" alt="">
+      </div>
+      <div class="sub-img-1">
+        <img src="{% static 'images/Camiseta1.png' %}" alt="">
+      </div>
+      <div class="sub-img-1">
+        <img src="{% static 'images/Camiseta1.png' %}" alt="">
+      </div>
+    </div>
+    {% block image_sub %}
+    {% endblock %}
+    <div class="titulo">
+      <h1>Camiseta GOD TOLD ME TO KEEP GOING</h1>
+      <h1 style="color:#E2E2E2;">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h1>
+      <img src="{%static 'images/corazon.png'%}" style = "padding-top: 10px">
+      <h1 style="padding-top: 10px; padding-bottom: 10px">$40.000</h1>
+      <h3 style="padding-bottom:10px">Color: Negro</h3>
+      <div class="circle">
+        <div class="other-circle">
+        </div>
+      </div>
+      <h3 style="padding-bottom:10px;padding-top:10px">Selecciona tu talla:</h3>
+      <div class="tallas">
+        <div class="talla">
+          <a href="#">XS</a>
+        </div>
+        <div class="talla">
+          <a href="#">S</a>
+        </div>
+        <div class="talla">
+          <a href="#">M</a>
+        </div>
+        <div class="talla">
+          <a href="#">L</a>
+        </div>
+        <div class="talla-xl">
+          <a href="#" style="border-style: none">XL</a>
+        </div>
+      </div>
+      <h3 style="padding-top:10px; padding-bottom: 10px">Descripción:</h3>
+      <div class="descripcion">
+        <h4>Camiseta de manga corta con print de texto en contraste, con cuello redondo y confeccionada en viscosa.</h4>
+      </div>
+      <div class="redes">
+        <div class="red">
+          <img src="{%static 'images/instagram.png'%}" alt="">
+        </div>
+        <div class="red">
+          <img src="{%static 'images/facebook.png'%}" alt="">
+        </div>
+        <div class="red">
+          <img src="{%static 'images/pinterest.png'%}" alt="">
+        </div>
+        <div class="red">
+          <img src="{%static 'images/twitter.png'%}" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

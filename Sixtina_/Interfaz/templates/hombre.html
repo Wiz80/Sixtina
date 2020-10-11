@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block interfaz %}
-<img class = lienzo src= "{%static 'images/David_1.png' %}"/>
+<img class = lienzo src= "{%static 'images/David.png' %}"/>
 {% endblock %}
 {% block herramientas %}
 <div class = 'mujer'>
     <img src = "{%static 'images/Mujer.png'%}">
 </div>
 <div class = 'hombre'>
-    <img src = "{%static 'images/Hombre.png'%}">
+    <a href="{% url 'camisetas-hombre' %}"><img src = "{%static 'images/Hombre.png'%}"></a>
 </div>
 <div class = 'new'>
     <img src = "{%static 'images/New.png'%}"/>

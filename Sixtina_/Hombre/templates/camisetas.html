@@ -1,5 +1,16 @@
 {% extends "ropa.html" %}
 {% load static %}
+{% block box_gender %}
+<div class="mujer-box">
+  <a href="{% url 'mujer' %}">MUJER</a>
+</div>
+<div class="separador">
+  <p>|</p>
+</div>
+<div class="hombre-box">
+  <a href="{% url 'camisetas-hombre' %}" style="color: #3D3D3D;">HOMBRE</a>
+</div>
+{% endblock %}
 {% block ropa %}
   {% if camisetas %}
     <div class="toute">
@@ -9,7 +20,7 @@
             {% if  i == 0 and camiseta.Idn <= 4 or i == 1 and camiseta.Idn >= 5%}
               <div class="boxClothes">
                 <div class="imageClothes">
-                  <img src="{{camiseta.imagen_1.url}}" class="contenido">
+                  <a href="#"><img src="{{camiseta.imagen_1.url}}" class="contenido"></a>
                 </div>
                 <div class="descripcion">
                   <h6>{{camiseta.Titulo}}</h6>
@@ -30,8 +41,8 @@
   <ul>
     <li><a href="#">Chaquetas</a></li>
     <li><a href="#">Pantalones y Jeans</a></li>
-    <li><a href="{% url 'camisetas-hombre'%}" style="font-weight: bold">Camisas</a></li>
-    <li><a href="#">Sudaderas</a></li>
+    <li><a href="{% url 'camisetas-hombre'%}" style="color: #3D3D3D;">Camisetas</a></li>
+    <li><a href="#">Camisas</a></li>
     <li><a href="#">Sudaderas</a></li>
   </ul>
 </div>

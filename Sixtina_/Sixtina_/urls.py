@@ -28,7 +28,8 @@ urlpatterns = [
     path('hombre/',interviews.hombre, name = "hombre"),
     path('', interviews.mujer, name = "mujer"),
     path('ropa/', ropaviews.ropa, name = "ropa"),
-    path('camisetas-hombre/', homviews.camisetas, name = "camisetas-hombre")
+    path('camisetas-hombre/', homviews.camisetas, name = "camisetas-hombre"),
+    path('template-ropa/', ropaviews.template_ropa, name = "template-ropa")
 ]
 
 if settings.DEBUG:

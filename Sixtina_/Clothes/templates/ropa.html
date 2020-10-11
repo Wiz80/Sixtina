@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="{% static 'css/ropa.css' %}">
+    <link rel="stylesheet" href="{% static 'css/clothes.css' %}">
   </head>
   <body>
     <div class = "contenedor">
@@ -16,19 +16,12 @@
         </div>
       </header>
       <div class="box" id = "box">
-        <div class="mujer-box">
-          <a href="{% url 'mujer' %}" style="color:#929292;">MUJER</a>
-        </div>
-        <div class="separador">
-          <p style = "color: #929292;">|</p>
-        </div>
-        <div class="hombre-box">
-          <a href="{% url 'camisetas-hombre' %}" style = "font-weight: bold;color:#929292;">HOMBRE</a>
-        </div>
+        {% block box_gender %}
+        {% endblock %}
         <div class="lista">
           <ul>
             <li><a href="#">Novedades</a></li>
-            <li><a onclick="abrir_lista2()" onmouseover="mantener_lista2()" style="cursor: pointer; font-weight: bold;">Ropa</a></li>
+            <li><a onclick="abrir_lista2()" onmouseover="mantener_lista2()" style="cursor: pointer;color: #3D3D3D;">Ropa</a></li>
             <li><a href="#">Accesorios</a></li>
             <li><a href="#">Descuentos</a></li>
             <li><a href="#">Más +</a></li>
