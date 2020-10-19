@@ -1,8 +1,5 @@
 {% extends "layout.html" %}
 {% load static %}
-{% block interfaz %}
-<img class = lienzo src= "{%static 'images/David.png' %}"/>
-{% endblock %}
 {% block herramientas %}
 <div class = 'mujer'>
     <img src = "{%static 'images/Mujer.png'%}">
@@ -12,6 +9,17 @@
 </div>
 <div class = 'new'>
     <img src = "{%static 'images/New.png'%}"/>
+</div>
+{% endblock %}
+{% block gender %}
+<div class="mujer-box">
+  <a href="{% url 'mujer' %}" style="color: #0B0F10">MUJER</a>
+</div>
+<div class="separador">
+  <p>|</p>
+</div>
+<div class="hombre-box">
+  <a href="{% url 'hombre' %}">HOMBRE</a>
 </div>
 {% endblock %}
 {% block genero %}

@@ -1,0 +1,38 @@
+{% extends "template-ropa.html" %}
+{% load static %}
+{% block title %}
+  {{camiseta.Titulo}}
+{% endblock %}
+{% block titulo %}
+  {{camiseta.Titulo}}
+{% endblock %}
+{% block precio %}
+  {{camiseta.Precio}}
+{% endblock %}
+{% block image_principal %}
+<img src="{{camiseta.imagen_1.url}}" alt="">
+{% endblock %}
+{% block sub-img %}
+<div class="sub-img">
+  {%for foto in fotos %}
+      {% if foto %}
+      <div class="sub-img-1">
+        <img src="{{foto.url}}" alt="">
+      </div>
+      {% endif %}
+  {%endfor%}
+</div>
+{% endblock %}
+{% block colores %}
+<h3 style="padding-bottom:10px">Color: </h3>
+<div class="box-color">
+  {% for color in colores %}
+  <div class="separar-colores">
+    <div class="circle">
+      <div class="other-circle" style="background-color: {{color}};">
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

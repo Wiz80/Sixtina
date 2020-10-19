@@ -1,5 +1,8 @@
 {% extends "ropa.html" %}
 {% load static %}
+{% block title %}
+  Camisetas Hombre
+{% endblock %}
 {% block box_gender %}
 <div class="mujer-box">
   <a href="{% url 'mujer' %}">MUJER</a>
@@ -20,7 +23,7 @@
             {% if  i == 0 and camiseta.Idn <= 4 or i == 1 and camiseta.Idn >= 5%}
               <div class="boxClothes">
                 <div class="imageClothes">
-                  <a href="#"><img src="{{camiseta.imagen_1.url}}" class="contenido"></a>
+                  <a href="{% url 'camiseta-hombre' id=camiseta.Idn %}"><img src="{{camiseta.imagen_1.url}}" class="contenido"></a>
                 </div>
                 <div class="descripcion">
                   <h6>{{camiseta.Titulo}}</h6>

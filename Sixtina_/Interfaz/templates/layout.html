@@ -3,26 +3,18 @@
 <html>
 <head>
     <title>SIXTINA</title>
-    <link rel="stylesheet" href="{%static 'css/index.css' %}">
-    <script src = "{% static 'js/box.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'css/layout.css' %}">
+    <script src = "{% static 'js/dynamic.js'%}"></script>
 </head>
 <body>
     <div class = "contenedor">
-        {% block interfaz %}
-        {% endblock %}
+        <img class = lienzo onclick = "cerrarVentanas()" src= "{%static 'images/David.png' %}"/>
         <div class="box" id = "box" onmouseout="cerrarBox()" onmouseover="mantenerBox()">
           <div class="logo">
             <img src="{%static 'images/sixtina_3.png'%}">
           </div>
-          <div class="mujer-box">
-            <a href="{% url 'mujer' %}" onclick="cambiarPropiedades(this)" id = "1">MUJER</a>
-          </div>
-          <div class="separador">
-            <p>|</p>
-          </div>
-          <div class="hombre-box">
-            <a href="{% url 'hombre' %}">HOMBRE</a>
-          </div>
+          {% block gender %}
+          {% endblock %}
           <div class="lista">
             <ul>
               <li><a href="#">Novedades</a></li>
@@ -39,11 +31,34 @@
           <a onmouseover="abrirBox()"><img src = "{%static 'images/mas.png'%}"/></a>
         </div>
         <div class = 'iniciar_sesion'>
-          {% if user.nombre == 'default' %}
-          <a href = "{% url 'login' %}" style  = "padding-right: 20px;">INICIAR SESION</a>
-          {% else %}
-          <h1 style  = "padding-right: 20px;" class = "usuario">{{user.nombre}}</h1>
-          {% endif %}
+          <a href = "#box-login" style  = "padding-right: 20px;" onclick = "abrirBoxLogin()">INICIAR SESION</a>
+        </div>
+        <div class="box-login" id = "box-login">
+          <div class="contenido-box-login">
+            <h1>Accede a tu cuenta</h1>
+            <div class="acceso">
+            </div>
+            <div class="sin-cuenta">
+              <h1>¿Nuevo en Sixtina?</h1>
+              <input type="submit" name="" value="Registrate" onclick = "abrirBoxNew()">
+            </div>
+          </div>
+        </div>
+        <div class="boxNewAcount" id = "boxNewAcount">
+          <div class="contenido-box-login">
+            <h1>REGÍSTRATE</h1>
+            <div class="acceso">
+              {{user_register.errors}}
+              <form method="post" action="#boxNewAcount">
+                {% csrf_token %}
+                {% for field in user_register%}
+                  <label>{{field.label}}</label>
+                  {{field}}
+                {% endfor %}
+                <input type="submit" name="" value="Registrarse">
+              </form>
+            </div>
+          </div>
         </div>
         <img src="{% static 'images/shopping-bag.png' %}" class="bag">
         <div class = 'buscar'>

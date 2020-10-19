@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'Usuarios',
     'Clothes',
     'Hombre',
+    'Mujer',
+    'Compra',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,24 +105,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-    {
-        'NAME': 'django_password_validators.password_history.password_validation.UniquePasswordsValidator',
-        'OPTIONS': {
-             'min_length_digit': 1,
-             'min_length_alpha': 2,
-             'min_length_special': 3,
-             'min_length_lower': 4,
-             'min_length_upper': 5,
-             'special_characters': "[~!@#$%^&*()_+{}\":;'[]"
-         }
-    },
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 

@@ -10,7 +10,7 @@ body{
 .principal-img{
   position: absolute;
   top:0px;
-  left: 30%;
+  left: 25%;
   width: 500px;
   height: 100%;
 }
@@ -18,8 +18,8 @@ body{
   height: 100%;
   width: 100%
 }
-
 .sub-img{
+  position: absolute;
   height: 100%;
   width: 300px;
   left: 0px;
@@ -42,6 +42,15 @@ body{
   left: 65%;
   top: 15%;
 }
+.box-color{
+  position: relative;
+  width: 300px;
+  height: 30px;
+  display: flex;
+}
+.separar-colores{
+  padding-right: 30px;
+}
 .circle{
   width: 20px;
   height: 20px;
@@ -55,7 +64,6 @@ body{
   width: 19px;
   height: 19px;
   border-radius: 50%;
-  background-color: #0B0F10;
 }
 .tallas{
   width: 300px;
@@ -90,7 +98,22 @@ body{
 }
 .descripcion{
   width: 470px;
-  height: 100px;
+  height: 50px;
+}
+.comprar{
+  padding-bottom: 100px;
+}
+input[type=submit]{
+  width: 300px;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid #707070;
+  outline: none;
+  background-color: #191919;
+  color: white;
+  font-family: 'Proxima Nova Regular';
+  font-size: 13px;
+  cursor: pointer;
 }
 .redes{
   width: 500px;
